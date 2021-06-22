@@ -1,0 +1,63 @@
+{
+  "name": "@bounteous/vue-storefront-aem",
+  "version": "0.0.1",
+  "description": "Adobe Experience Manager integration with Vue Storefront",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
+  "server": "server/index.js",
+  "scripts": {
+    "build": "rollup -c && rm -r -- ./server/*/",
+    "build:clean": "rollup -c && rm -r -- ./lib/*/ && rm -r -- ./server/*/",
+    "dev": "rollup -c -w",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint --ext .js,.ts --ignore-path .eslintignore .",
+    "prepublish": "yarn build"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --ext .js,.ts --ignore-path .eslintignore ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "author": "Bounteous",
+  "license": "MIT",
+  "dependencies": {
+    "@adobe/aem-headless-client-nodejs": "^1.0.2",
+    "@vue-storefront/core": "^2.3.0",
+    "rollup": "latest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@jest/globals": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-vue": "latest",
+    "husky": "^5.1.3",
+    "jest": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest",
+    "rollup-plugin-typescript2": "latest",
+    "ts-jest": "latest",
+    "typescript": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "vuestorefront",
+    "vue-storefront",
+    "aem",
+    "cms",
+    "integration",
+    "vue",
+    "vuejs"
+  ],
+  "homepage": "https://github.com/Bounteous-Inc/vue-storefront-aem"
+}

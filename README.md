@@ -6,8 +6,6 @@ The main feature at this point is being able to make GraphQL queries to AEM whic
 
 ## Installation
 
----
-
 Install the module into your app:
 
 ```bash
@@ -21,8 +19,6 @@ yarn add @bounteous/vue-storefront-aem
 ```
 
 ## Setup
-
----
 
 Register the module in the `nuxt.config.js` file:
 
@@ -86,6 +82,8 @@ module.exports = {
 Note that for real use cases you'll need to point the configuration to an AEM Publish instance because otherwise images won't render.
 
 ## Content Rendering
+
+You can go through the manual steps below or check out our [repository with examples](https://github.com/Bounteous-Inc/vue-storefront-aem-examples).
 
 ---
 
